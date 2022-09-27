@@ -1,14 +1,12 @@
 package levvel.io.model;
 
 import lombok.Data;
+import lombok.NonNull;
 
 @Data
 public class Comment {
+    @NonNull
     private String author;
+    @NonNull
     private String text;
-
-    public Comment(String author, String text) {
-        this.author = author;
-        this.text = text;
-    }
 }

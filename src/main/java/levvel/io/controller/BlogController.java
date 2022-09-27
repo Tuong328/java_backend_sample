@@ -33,7 +33,7 @@ public class BlogController {
     public ResponseEntity<Comment> addComment(@PathVariable String id, @RequestBody Comment comment) {
         Blog blog = blogService.getBlog(id);
         blog.addComment(comment);
-        //persist/update blog in database
+        //update blog in database
         blogService.addBlog(blog);
         return ResponseEntity.ok().body(comment);
     }
